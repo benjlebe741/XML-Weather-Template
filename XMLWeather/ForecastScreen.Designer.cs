@@ -28,200 +28,427 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.day1Output = new System.Windows.Forms.Label();
+            this.HL1output = new System.Windows.Forms.Label();
+            this.cityOutput = new System.Windows.Forms.Label();
+            this.todayLabel = new System.Windows.Forms.Label();
             this.forecastLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.min1 = new System.Windows.Forms.Label();
-            this.minLabel = new System.Windows.Forms.Label();
-            this.max1 = new System.Windows.Forms.Label();
-            this.maxLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.date1 = new System.Windows.Forms.Label();
-            this.date2 = new System.Windows.Forms.Label();
-            this.min2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.max2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.status1Output = new System.Windows.Forms.Label();
+            this.day2Output = new System.Windows.Forms.Label();
+            this.HL2output = new System.Windows.Forms.Label();
+            this.status2Output = new System.Windows.Forms.Label();
+            this.day4Output = new System.Windows.Forms.Label();
+            this.HL4output = new System.Windows.Forms.Label();
+            this.status4Output = new System.Windows.Forms.Label();
+            this.day3Output = new System.Windows.Forms.Label();
+            this.HL3output = new System.Windows.Forms.Label();
+            this.status3Output = new System.Windows.Forms.Label();
+            this.day6Output = new System.Windows.Forms.Label();
+            this.HL6output = new System.Windows.Forms.Label();
+            this.status6Output = new System.Windows.Forms.Label();
+            this.day5Output = new System.Windows.Forms.Label();
+            this.HL5output = new System.Windows.Forms.Label();
+            this.status5Output = new System.Windows.Forms.Label();
+            this.day7Output = new System.Windows.Forms.Label();
+            this.HL7output = new System.Windows.Forms.Label();
+            this.status7Output = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // day1Output
+            // 
+            this.day1Output.BackColor = System.Drawing.Color.Transparent;
+            this.day1Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day1Output.ForeColor = System.Drawing.Color.White;
+            this.day1Output.Location = new System.Drawing.Point(20, 143);
+            this.day1Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day1Output.Name = "day1Output";
+            this.day1Output.Size = new System.Drawing.Size(247, 39);
+            this.day1Output.TabIndex = 64;
+            this.day1Output.Text = "Monday";
+            this.day1Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day1Output.Click += new System.EventHandler(this.feelsLikeOutput_Click);
+            // 
+            // HL1output
+            // 
+            this.HL1output.BackColor = System.Drawing.Color.Transparent;
+            this.HL1output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL1output.ForeColor = System.Drawing.Color.White;
+            this.HL1output.Location = new System.Drawing.Point(275, 143);
+            this.HL1output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL1output.Name = "HL1output";
+            this.HL1output.Size = new System.Drawing.Size(247, 39);
+            this.HL1output.TabIndex = 61;
+            this.HL1output.Text = "H: 10, L: 20";
+            this.HL1output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL1output.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cityOutput
+            // 
+            this.cityOutput.BackColor = System.Drawing.Color.Transparent;
+            this.cityOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityOutput.ForeColor = System.Drawing.Color.White;
+            this.cityOutput.Location = new System.Drawing.Point(31, 27);
+            this.cityOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cityOutput.Name = "cityOutput";
+            this.cityOutput.Size = new System.Drawing.Size(467, 54);
+            this.cityOutput.TabIndex = 60;
+            this.cityOutput.Text = "City";
+            this.cityOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // todayLabel
+            // 
+            this.todayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.todayLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todayLabel.ForeColor = System.Drawing.Color.White;
+            this.todayLabel.Location = new System.Drawing.Point(40, 752);
+            this.todayLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.todayLabel.Name = "todayLabel";
+            this.todayLabel.Size = new System.Drawing.Size(207, 82);
+            this.todayLabel.TabIndex = 56;
+            this.todayLabel.Tag = "";
+            this.todayLabel.Text = "Today";
+            this.todayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.todayLabel.Click += new System.EventHandler(this.todayLabel_Click);
             // 
             // forecastLabel
             // 
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
-            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
-            this.forecastLabel.Location = new System.Drawing.Point(213, 21);
+            this.forecastLabel.Location = new System.Drawing.Point(272, 738);
             this.forecastLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.forecastLabel.Name = "forecastLabel";
-            this.forecastLabel.Size = new System.Drawing.Size(124, 43);
-            this.forecastLabel.TabIndex = 62;
+            this.forecastLabel.Size = new System.Drawing.Size(253, 108);
+            this.forecastLabel.TabIndex = 68;
             this.forecastLabel.Text = "7 Day";
+            this.forecastLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // status1Output
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 43);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Today";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.status1Output.BackColor = System.Drawing.Color.Transparent;
+            this.status1Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status1Output.ForeColor = System.Drawing.Color.White;
+            this.status1Output.Location = new System.Drawing.Point(275, 182);
+            this.status1Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status1Output.Name = "status1Output";
+            this.status1Output.Size = new System.Drawing.Size(247, 39);
+            this.status1Output.TabIndex = 59;
+            this.status1Output.Text = "Partly cloudy";
+            this.status1Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status1Output.Click += new System.EventHandler(this.statusOutput_Click);
             // 
-            // min1
+            // day2Output
             // 
-            this.min1.BackColor = System.Drawing.Color.White;
-            this.min1.Location = new System.Drawing.Point(234, 255);
-            this.min1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.min1.Name = "min1";
-            this.min1.Size = new System.Drawing.Size(33, 20);
-            this.min1.TabIndex = 48;
+            this.day2Output.BackColor = System.Drawing.Color.Transparent;
+            this.day2Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day2Output.ForeColor = System.Drawing.Color.White;
+            this.day2Output.Location = new System.Drawing.Point(20, 226);
+            this.day2Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day2Output.Name = "day2Output";
+            this.day2Output.Size = new System.Drawing.Size(247, 39);
+            this.day2Output.TabIndex = 71;
+            this.day2Output.Text = "Monday";
+            this.day2Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day2Output.Click += new System.EventHandler(this.day2Output_Click);
             // 
-            // minLabel
+            // HL2output
             // 
-            this.minLabel.AutoSize = true;
-            this.minLabel.ForeColor = System.Drawing.Color.White;
-            this.minLabel.Location = new System.Drawing.Point(90, 255);
-            this.minLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(133, 20);
-            this.minLabel.TabIndex = 46;
-            this.minLabel.Text = " Min Temperature";
+            this.HL2output.BackColor = System.Drawing.Color.Transparent;
+            this.HL2output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL2output.ForeColor = System.Drawing.Color.White;
+            this.HL2output.Location = new System.Drawing.Point(275, 226);
+            this.HL2output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL2output.Name = "HL2output";
+            this.HL2output.Size = new System.Drawing.Size(247, 39);
+            this.HL2output.TabIndex = 70;
+            this.HL2output.Text = "H: 10, L: 20";
+            this.HL2output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL2output.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // max1
+            // status2Output
             // 
-            this.max1.BackColor = System.Drawing.Color.White;
-            this.max1.Location = new System.Drawing.Point(234, 210);
-            this.max1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.max1.Name = "max1";
-            this.max1.Size = new System.Drawing.Size(33, 20);
-            this.max1.TabIndex = 45;
+            this.status2Output.BackColor = System.Drawing.Color.Transparent;
+            this.status2Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status2Output.ForeColor = System.Drawing.Color.White;
+            this.status2Output.Location = new System.Drawing.Point(275, 266);
+            this.status2Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status2Output.Name = "status2Output";
+            this.status2Output.Size = new System.Drawing.Size(247, 39);
+            this.status2Output.TabIndex = 69;
+            this.status2Output.Text = "Partly cloudy";
+            this.status2Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status2Output.Click += new System.EventHandler(this.label4_Click);
             // 
-            // maxLabel
+            // day4Output
             // 
-            this.maxLabel.AutoSize = true;
-            this.maxLabel.ForeColor = System.Drawing.Color.White;
-            this.maxLabel.Location = new System.Drawing.Point(90, 210);
-            this.maxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(133, 20);
-            this.maxLabel.TabIndex = 44;
-            this.maxLabel.Text = "Max Temperature";
+            this.day4Output.BackColor = System.Drawing.Color.Transparent;
+            this.day4Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day4Output.ForeColor = System.Drawing.Color.White;
+            this.day4Output.Location = new System.Drawing.Point(21, 396);
+            this.day4Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day4Output.Name = "day4Output";
+            this.day4Output.Size = new System.Drawing.Size(247, 39);
+            this.day4Output.TabIndex = 77;
+            this.day4Output.Text = "Monday";
+            this.day4Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day4Output.Click += new System.EventHandler(this.day4Output_Click);
             // 
-            // label5
+            // HL4output
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(194, 38);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 41);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "____________________________";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.HL4output.BackColor = System.Drawing.Color.Transparent;
+            this.HL4output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL4output.ForeColor = System.Drawing.Color.White;
+            this.HL4output.Location = new System.Drawing.Point(276, 396);
+            this.HL4output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL4output.Name = "HL4output";
+            this.HL4output.Size = new System.Drawing.Size(247, 39);
+            this.HL4output.TabIndex = 76;
+            this.HL4output.Text = "H: 10, L: 20";
+            this.HL4output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL4output.Click += new System.EventHandler(this.label6_Click);
             // 
-            // date1
+            // status4Output
             // 
-            this.date1.AutoSize = true;
-            this.date1.ForeColor = System.Drawing.Color.White;
-            this.date1.Location = new System.Drawing.Point(90, 169);
-            this.date1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(44, 20);
-            this.date1.TabIndex = 64;
-            this.date1.Text = "Date";
+            this.status4Output.BackColor = System.Drawing.Color.Transparent;
+            this.status4Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status4Output.ForeColor = System.Drawing.Color.White;
+            this.status4Output.Location = new System.Drawing.Point(276, 436);
+            this.status4Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status4Output.Name = "status4Output";
+            this.status4Output.Size = new System.Drawing.Size(247, 39);
+            this.status4Output.TabIndex = 75;
+            this.status4Output.Text = "Partly cloudy";
+            this.status4Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status4Output.Click += new System.EventHandler(this.label7_Click);
             // 
-            // date2
+            // day3Output
             // 
-            this.date2.AutoSize = true;
-            this.date2.ForeColor = System.Drawing.Color.White;
-            this.date2.Location = new System.Drawing.Point(90, 298);
-            this.date2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(44, 20);
-            this.date2.TabIndex = 69;
-            this.date2.Text = "Date";
+            this.day3Output.BackColor = System.Drawing.Color.Transparent;
+            this.day3Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day3Output.ForeColor = System.Drawing.Color.White;
+            this.day3Output.Location = new System.Drawing.Point(21, 314);
+            this.day3Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day3Output.Name = "day3Output";
+            this.day3Output.Size = new System.Drawing.Size(247, 39);
+            this.day3Output.TabIndex = 74;
+            this.day3Output.Text = "Monday";
+            this.day3Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day3Output.Click += new System.EventHandler(this.day3Output_Click);
             // 
-            // min2
+            // HL3output
             // 
-            this.min2.BackColor = System.Drawing.Color.White;
-            this.min2.Location = new System.Drawing.Point(234, 384);
-            this.min2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.min2.Name = "min2";
-            this.min2.Size = new System.Drawing.Size(33, 20);
-            this.min2.TabIndex = 68;
+            this.HL3output.BackColor = System.Drawing.Color.Transparent;
+            this.HL3output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL3output.ForeColor = System.Drawing.Color.White;
+            this.HL3output.Location = new System.Drawing.Point(276, 314);
+            this.HL3output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL3output.Name = "HL3output";
+            this.HL3output.Size = new System.Drawing.Size(247, 39);
+            this.HL3output.TabIndex = 73;
+            this.HL3output.Text = "H: 10, L: 20";
+            this.HL3output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL3output.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label4
+            // status3Output
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(90, 384);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 20);
-            this.label4.TabIndex = 67;
-            this.label4.Text = " Min Temperature";
+            this.status3Output.BackColor = System.Drawing.Color.Transparent;
+            this.status3Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status3Output.ForeColor = System.Drawing.Color.White;
+            this.status3Output.Location = new System.Drawing.Point(276, 353);
+            this.status3Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status3Output.Name = "status3Output";
+            this.status3Output.Size = new System.Drawing.Size(247, 39);
+            this.status3Output.TabIndex = 72;
+            this.status3Output.Text = "Partly cloudy";
+            this.status3Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status3Output.Click += new System.EventHandler(this.label10_Click);
             // 
-            // max2
+            // day6Output
             // 
-            this.max2.BackColor = System.Drawing.Color.White;
-            this.max2.Location = new System.Drawing.Point(234, 339);
-            this.max2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.max2.Name = "max2";
-            this.max2.Size = new System.Drawing.Size(33, 20);
-            this.max2.TabIndex = 66;
+            this.day6Output.BackColor = System.Drawing.Color.Transparent;
+            this.day6Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day6Output.ForeColor = System.Drawing.Color.White;
+            this.day6Output.Location = new System.Drawing.Point(20, 551);
+            this.day6Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day6Output.Name = "day6Output";
+            this.day6Output.Size = new System.Drawing.Size(247, 39);
+            this.day6Output.TabIndex = 83;
+            this.day6Output.Text = "Monday";
+            this.day6Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day6Output.Click += new System.EventHandler(this.day6Output_Click);
             // 
-            // label7
+            // HL6output
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(90, 339);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 20);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Max Temperature";
+            this.HL6output.BackColor = System.Drawing.Color.Transparent;
+            this.HL6output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL6output.ForeColor = System.Drawing.Color.White;
+            this.HL6output.Location = new System.Drawing.Point(275, 551);
+            this.HL6output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL6output.Name = "HL6output";
+            this.HL6output.Size = new System.Drawing.Size(247, 39);
+            this.HL6output.TabIndex = 82;
+            this.HL6output.Text = "H: 10, L: 20";
+            this.HL6output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL6output.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // status6Output
+            // 
+            this.status6Output.BackColor = System.Drawing.Color.Transparent;
+            this.status6Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status6Output.ForeColor = System.Drawing.Color.White;
+            this.status6Output.Location = new System.Drawing.Point(275, 591);
+            this.status6Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status6Output.Name = "status6Output";
+            this.status6Output.Size = new System.Drawing.Size(247, 39);
+            this.status6Output.TabIndex = 81;
+            this.status6Output.Text = "Partly cloudy";
+            this.status6Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status6Output.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // day5Output
+            // 
+            this.day5Output.BackColor = System.Drawing.Color.Transparent;
+            this.day5Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day5Output.ForeColor = System.Drawing.Color.White;
+            this.day5Output.Location = new System.Drawing.Point(21, 475);
+            this.day5Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day5Output.Name = "day5Output";
+            this.day5Output.Size = new System.Drawing.Size(247, 39);
+            this.day5Output.TabIndex = 80;
+            this.day5Output.Text = "Monday";
+            this.day5Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day5Output.Click += new System.EventHandler(this.day5Output_Click);
+            // 
+            // HL5output
+            // 
+            this.HL5output.BackColor = System.Drawing.Color.Transparent;
+            this.HL5output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL5output.ForeColor = System.Drawing.Color.White;
+            this.HL5output.Location = new System.Drawing.Point(276, 475);
+            this.HL5output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL5output.Name = "HL5output";
+            this.HL5output.Size = new System.Drawing.Size(247, 39);
+            this.HL5output.TabIndex = 79;
+            this.HL5output.Text = "H: 10, L: 20";
+            this.HL5output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL5output.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // status5Output
+            // 
+            this.status5Output.BackColor = System.Drawing.Color.Transparent;
+            this.status5Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status5Output.ForeColor = System.Drawing.Color.White;
+            this.status5Output.Location = new System.Drawing.Point(276, 514);
+            this.status5Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status5Output.Name = "status5Output";
+            this.status5Output.Size = new System.Drawing.Size(247, 39);
+            this.status5Output.TabIndex = 78;
+            this.status5Output.Text = "Partly cloudy";
+            this.status5Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status5Output.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // day7Output
+            // 
+            this.day7Output.BackColor = System.Drawing.Color.Transparent;
+            this.day7Output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.day7Output.ForeColor = System.Drawing.Color.White;
+            this.day7Output.Location = new System.Drawing.Point(20, 636);
+            this.day7Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.day7Output.Name = "day7Output";
+            this.day7Output.Size = new System.Drawing.Size(247, 39);
+            this.day7Output.TabIndex = 86;
+            this.day7Output.Text = "Monday";
+            this.day7Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.day7Output.Click += new System.EventHandler(this.day7Output_Click);
+            // 
+            // HL7output
+            // 
+            this.HL7output.BackColor = System.Drawing.Color.Transparent;
+            this.HL7output.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL7output.ForeColor = System.Drawing.Color.White;
+            this.HL7output.Location = new System.Drawing.Point(275, 636);
+            this.HL7output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HL7output.Name = "HL7output";
+            this.HL7output.Size = new System.Drawing.Size(247, 39);
+            this.HL7output.TabIndex = 85;
+            this.HL7output.Text = "H: 10, L: 20";
+            this.HL7output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HL7output.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // status7Output
+            // 
+            this.status7Output.BackColor = System.Drawing.Color.Transparent;
+            this.status7Output.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status7Output.ForeColor = System.Drawing.Color.White;
+            this.status7Output.Location = new System.Drawing.Point(275, 676);
+            this.status7Output.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.status7Output.Name = "status7Output";
+            this.status7Output.Size = new System.Drawing.Size(247, 39);
+            this.status7Output.TabIndex = 84;
+            this.status7Output.Text = "Partly cloudy";
+            this.status7Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.status7Output.Click += new System.EventHandler(this.label19_Click);
             // 
             // ForecastScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.date2);
-            this.Controls.Add(this.min2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.max2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.date1);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.Controls.Add(this.day7Output);
+            this.Controls.Add(this.HL7output);
+            this.Controls.Add(this.status7Output);
+            this.Controls.Add(this.day6Output);
+            this.Controls.Add(this.HL6output);
+            this.Controls.Add(this.status6Output);
+            this.Controls.Add(this.day5Output);
+            this.Controls.Add(this.HL5output);
+            this.Controls.Add(this.status5Output);
+            this.Controls.Add(this.day4Output);
+            this.Controls.Add(this.HL4output);
+            this.Controls.Add(this.status4Output);
+            this.Controls.Add(this.day3Output);
+            this.Controls.Add(this.HL3output);
+            this.Controls.Add(this.status3Output);
+            this.Controls.Add(this.day2Output);
+            this.Controls.Add(this.HL2output);
+            this.Controls.Add(this.status2Output);
+            this.Controls.Add(this.day1Output);
+            this.Controls.Add(this.HL1output);
+            this.Controls.Add(this.cityOutput);
+            this.Controls.Add(this.status1Output);
             this.Controls.Add(this.forecastLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.min1);
-            this.Controls.Add(this.minLabel);
-            this.Controls.Add(this.max1);
-            this.Controls.Add(this.maxLabel);
-            this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.todayLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ForecastScreen";
-            this.Size = new System.Drawing.Size(375, 615);
+            this.Size = new System.Drawing.Size(541, 898);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label day1Output;
+        private System.Windows.Forms.Label HL1output;
+        private System.Windows.Forms.Label cityOutput;
+        private System.Windows.Forms.Label todayLabel;
         private System.Windows.Forms.Label forecastLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label min1;
-        private System.Windows.Forms.Label minLabel;
-        private System.Windows.Forms.Label max1;
-        private System.Windows.Forms.Label maxLabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label date1;
-        private System.Windows.Forms.Label date2;
-        private System.Windows.Forms.Label min2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label max2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label status1Output;
+        private System.Windows.Forms.Label day2Output;
+        private System.Windows.Forms.Label HL2output;
+        private System.Windows.Forms.Label status2Output;
+        private System.Windows.Forms.Label day4Output;
+        private System.Windows.Forms.Label HL4output;
+        private System.Windows.Forms.Label status4Output;
+        private System.Windows.Forms.Label day3Output;
+        private System.Windows.Forms.Label HL3output;
+        private System.Windows.Forms.Label status3Output;
+        private System.Windows.Forms.Label day6Output;
+        private System.Windows.Forms.Label HL6output;
+        private System.Windows.Forms.Label status6Output;
+        private System.Windows.Forms.Label day5Output;
+        private System.Windows.Forms.Label HL5output;
+        private System.Windows.Forms.Label status5Output;
+        private System.Windows.Forms.Label day7Output;
+        private System.Windows.Forms.Label HL7output;
+        private System.Windows.Forms.Label status7Output;
     }
 }

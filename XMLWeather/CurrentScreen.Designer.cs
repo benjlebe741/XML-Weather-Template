@@ -28,160 +28,210 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cityOutput = new System.Windows.Forms.Label();
-            this.maxOutput = new System.Windows.Forms.Label();
-            this.maxLabel = new System.Windows.Forms.Label();
-            this.minOutput = new System.Windows.Forms.Label();
-            this.minLabel = new System.Windows.Forms.Label();
-            this.currentOutput = new System.Windows.Forms.Label();
-            this.tempLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.drawTimer = new System.Windows.Forms.Timer(this.components);
             this.forecastLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.todayLabel = new System.Windows.Forms.Label();
+            this.currentTempOutput = new System.Windows.Forms.Label();
+            this.statusOutput = new System.Windows.Forms.Label();
+            this.cityOutput = new System.Windows.Forms.Label();
+            this.highLowOutput = new System.Windows.Forms.Label();
+            this.windSpeedOutput = new System.Windows.Forms.Label();
+            this.windDirectionOutput = new System.Windows.Forms.Label();
+            this.feelsLikeOutput = new System.Windows.Forms.Label();
+            this.humidityOutput = new System.Windows.Forms.Label();
+            this.precipitationOutput = new System.Windows.Forms.Label();
+            this.cloudsOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cityOutput
+            // drawTimer
             // 
-            this.cityOutput.BackColor = System.Drawing.Color.Transparent;
-            this.cityOutput.ForeColor = System.Drawing.Color.White;
-            this.cityOutput.Location = new System.Drawing.Point(32, 131);
-            this.cityOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cityOutput.Name = "cityOutput";
-            this.cityOutput.Size = new System.Drawing.Size(106, 35);
-            this.cityOutput.TabIndex = 22;
-            this.cityOutput.Text = "City";
-            // 
-            // maxOutput
-            // 
-            this.maxOutput.BackColor = System.Drawing.Color.White;
-            this.maxOutput.Location = new System.Drawing.Point(176, 278);
-            this.maxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.maxOutput.Name = "maxOutput";
-            this.maxOutput.Size = new System.Drawing.Size(170, 20);
-            this.maxOutput.TabIndex = 32;
-            // 
-            // maxLabel
-            // 
-            this.maxLabel.AutoSize = true;
-            this.maxLabel.ForeColor = System.Drawing.Color.White;
-            this.maxLabel.Location = new System.Drawing.Point(32, 278);
-            this.maxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(38, 20);
-            this.maxLabel.TabIndex = 31;
-            this.maxLabel.Text = "max";
-            // 
-            // minOutput
-            // 
-            this.minOutput.BackColor = System.Drawing.Color.White;
-            this.minOutput.Location = new System.Drawing.Point(176, 243);
-            this.minOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.minOutput.Name = "minOutput";
-            this.minOutput.Size = new System.Drawing.Size(170, 20);
-            this.minOutput.TabIndex = 30;
-            // 
-            // minLabel
-            // 
-            this.minLabel.AutoSize = true;
-            this.minLabel.ForeColor = System.Drawing.Color.White;
-            this.minLabel.Location = new System.Drawing.Point(32, 243);
-            this.minLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(34, 20);
-            this.minLabel.TabIndex = 29;
-            this.minLabel.Text = "min";
-            // 
-            // currentOutput
-            // 
-            this.currentOutput.BackColor = System.Drawing.Color.Transparent;
-            this.currentOutput.ForeColor = System.Drawing.Color.White;
-            this.currentOutput.Location = new System.Drawing.Point(196, 209);
-            this.currentOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.currentOutput.Name = "currentOutput";
-            this.currentOutput.Size = new System.Drawing.Size(33, 20);
-            this.currentOutput.TabIndex = 28;
-            // 
-            // tempLabel
-            // 
-            this.tempLabel.AutoSize = true;
-            this.tempLabel.ForeColor = System.Drawing.Color.White;
-            this.tempLabel.Location = new System.Drawing.Point(32, 209);
-            this.tempLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.tempLabel.Name = "tempLabel";
-            this.tempLabel.Size = new System.Drawing.Size(157, 20);
-            this.tempLabel.TabIndex = 26;
-            this.tempLabel.Text = "Current Temperature";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 43);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Today";
+            this.drawTimer.Enabled = true;
+            this.drawTimer.Interval = 20;
+            this.drawTimer.Tick += new System.EventHandler(this.drawTimer_Tick_1);
             // 
             // forecastLabel
             // 
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
-            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
-            this.forecastLabel.Location = new System.Drawing.Point(212, 22);
-            this.forecastLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.forecastLabel.Location = new System.Drawing.Point(221, 611);
             this.forecastLabel.Name = "forecastLabel";
-            this.forecastLabel.Size = new System.Drawing.Size(124, 43);
+            this.forecastLabel.Size = new System.Drawing.Size(155, 67);
             this.forecastLabel.TabIndex = 41;
             this.forecastLabel.Text = "7 Day";
+            this.forecastLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.forecastLabel.Click += new System.EventHandler(this.forecastLabel_Click);
             // 
-            // label5
+            // todayLabel
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(29, 39);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 41);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "____________________________";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.todayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.todayLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todayLabel.ForeColor = System.Drawing.Color.White;
+            this.todayLabel.Location = new System.Drawing.Point(13, 600);
+            this.todayLabel.Name = "todayLabel";
+            this.todayLabel.Size = new System.Drawing.Size(190, 88);
+            this.todayLabel.TabIndex = 43;
+            this.todayLabel.Text = "Today";
+            this.todayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // currentTempOutput
+            // 
+            this.currentTempOutput.BackColor = System.Drawing.Color.Transparent;
+            this.currentTempOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentTempOutput.ForeColor = System.Drawing.Color.White;
+            this.currentTempOutput.Location = new System.Drawing.Point(36, 93);
+            this.currentTempOutput.Name = "currentTempOutput";
+            this.currentTempOutput.Size = new System.Drawing.Size(337, 124);
+            this.currentTempOutput.TabIndex = 44;
+            this.currentTempOutput.Text = "14";
+            this.currentTempOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // statusOutput
+            // 
+            this.statusOutput.BackColor = System.Drawing.Color.Transparent;
+            this.statusOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusOutput.ForeColor = System.Drawing.Color.White;
+            this.statusOutput.Location = new System.Drawing.Point(13, 249);
+            this.statusOutput.Name = "statusOutput";
+            this.statusOutput.Size = new System.Drawing.Size(376, 32);
+            this.statusOutput.TabIndex = 45;
+            this.statusOutput.Text = "Partly cloudy";
+            this.statusOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cityOutput
+            // 
+            this.cityOutput.BackColor = System.Drawing.Color.Transparent;
+            this.cityOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityOutput.ForeColor = System.Drawing.Color.White;
+            this.cityOutput.Location = new System.Drawing.Point(23, 22);
+            this.cityOutput.Name = "cityOutput";
+            this.cityOutput.Size = new System.Drawing.Size(350, 44);
+            this.cityOutput.TabIndex = 46;
+            this.cityOutput.Text = "City";
+            this.cityOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // highLowOutput
+            // 
+            this.highLowOutput.BackColor = System.Drawing.Color.Transparent;
+            this.highLowOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highLowOutput.ForeColor = System.Drawing.Color.White;
+            this.highLowOutput.Location = new System.Drawing.Point(18, 217);
+            this.highLowOutput.Name = "highLowOutput";
+            this.highLowOutput.Size = new System.Drawing.Size(371, 32);
+            this.highLowOutput.TabIndex = 47;
+            this.highLowOutput.Text = "H: 10, L: 20";
+            this.highLowOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // windSpeedOutput
+            // 
+            this.windSpeedOutput.BackColor = System.Drawing.Color.Transparent;
+            this.windSpeedOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windSpeedOutput.ForeColor = System.Drawing.Color.White;
+            this.windSpeedOutput.Location = new System.Drawing.Point(13, 490);
+            this.windSpeedOutput.Name = "windSpeedOutput";
+            this.windSpeedOutput.Size = new System.Drawing.Size(190, 32);
+            this.windSpeedOutput.TabIndex = 50;
+            this.windSpeedOutput.Text = "Windspeed at";
+            this.windSpeedOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // windDirectionOutput
+            // 
+            this.windDirectionOutput.BackColor = System.Drawing.Color.Transparent;
+            this.windDirectionOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windDirectionOutput.ForeColor = System.Drawing.Color.White;
+            this.windDirectionOutput.Location = new System.Drawing.Point(13, 522);
+            this.windDirectionOutput.Name = "windDirectionOutput";
+            this.windDirectionOutput.Size = new System.Drawing.Size(190, 32);
+            this.windDirectionOutput.TabIndex = 51;
+            this.windDirectionOutput.Text = "Wind Direction";
+            this.windDirectionOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // feelsLikeOutput
+            // 
+            this.feelsLikeOutput.BackColor = System.Drawing.Color.Transparent;
+            this.feelsLikeOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feelsLikeOutput.ForeColor = System.Drawing.Color.White;
+            this.feelsLikeOutput.Location = new System.Drawing.Point(13, 362);
+            this.feelsLikeOutput.Name = "feelsLikeOutput";
+            this.feelsLikeOutput.Size = new System.Drawing.Size(190, 32);
+            this.feelsLikeOutput.TabIndex = 52;
+            this.feelsLikeOutput.Text = "Feels like";
+            this.feelsLikeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // humidityOutput
+            // 
+            this.humidityOutput.BackColor = System.Drawing.Color.Transparent;
+            this.humidityOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.humidityOutput.ForeColor = System.Drawing.Color.White;
+            this.humidityOutput.Location = new System.Drawing.Point(13, 394);
+            this.humidityOutput.Name = "humidityOutput";
+            this.humidityOutput.Size = new System.Drawing.Size(190, 32);
+            this.humidityOutput.TabIndex = 53;
+            this.humidityOutput.Text = "Humidity";
+            this.humidityOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // precipitationOutput
+            // 
+            this.precipitationOutput.BackColor = System.Drawing.Color.Transparent;
+            this.precipitationOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precipitationOutput.ForeColor = System.Drawing.Color.White;
+            this.precipitationOutput.Location = new System.Drawing.Point(13, 426);
+            this.precipitationOutput.Name = "precipitationOutput";
+            this.precipitationOutput.Size = new System.Drawing.Size(190, 32);
+            this.precipitationOutput.TabIndex = 54;
+            this.precipitationOutput.Text = "Precipitation";
+            this.precipitationOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cloudsOutput
+            // 
+            this.cloudsOutput.BackColor = System.Drawing.Color.Transparent;
+            this.cloudsOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cloudsOutput.ForeColor = System.Drawing.Color.White;
+            this.cloudsOutput.Location = new System.Drawing.Point(13, 458);
+            this.cloudsOutput.Name = "cloudsOutput";
+            this.cloudsOutput.Size = new System.Drawing.Size(190, 32);
+            this.cloudsOutput.TabIndex = 55;
+            this.cloudsOutput.Text = "Clouds";
+            this.cloudsOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CurrentScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.forecastLabel);
-            this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.Controls.Add(this.cloudsOutput);
+            this.Controls.Add(this.precipitationOutput);
+            this.Controls.Add(this.humidityOutput);
+            this.Controls.Add(this.feelsLikeOutput);
+            this.Controls.Add(this.windDirectionOutput);
+            this.Controls.Add(this.windSpeedOutput);
+            this.Controls.Add(this.highLowOutput);
             this.Controls.Add(this.cityOutput);
-            this.Controls.Add(this.maxOutput);
-            this.Controls.Add(this.maxLabel);
-            this.Controls.Add(this.minOutput);
-            this.Controls.Add(this.minLabel);
-            this.Controls.Add(this.currentOutput);
-            this.Controls.Add(this.tempLabel);
-            this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.statusOutput);
+            this.Controls.Add(this.currentTempOutput);
+            this.Controls.Add(this.todayLabel);
+            this.Controls.Add(this.forecastLabel);
             this.Name = "CurrentScreen";
-            this.Size = new System.Drawing.Size(375, 615);
+            this.Size = new System.Drawing.Size(406, 730);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CurrentScreen_Paint);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label cityOutput;
-        private System.Windows.Forms.Label maxOutput;
-        private System.Windows.Forms.Label maxLabel;
-        private System.Windows.Forms.Label minOutput;
-        private System.Windows.Forms.Label minLabel;
-        private System.Windows.Forms.Label currentOutput;
-        private System.Windows.Forms.Label tempLabel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer drawTimer;
         private System.Windows.Forms.Label forecastLabel;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label todayLabel;
+        private System.Windows.Forms.Label currentTempOutput;
+        private System.Windows.Forms.Label statusOutput;
+        private System.Windows.Forms.Label cityOutput;
+        private System.Windows.Forms.Label highLowOutput;
+        private System.Windows.Forms.Label windSpeedOutput;
+        private System.Windows.Forms.Label windDirectionOutput;
+        private System.Windows.Forms.Label feelsLikeOutput;
+        private System.Windows.Forms.Label humidityOutput;
+        private System.Windows.Forms.Label precipitationOutput;
+        private System.Windows.Forms.Label cloudsOutput;
     }
 }
