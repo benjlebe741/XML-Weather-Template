@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using System.Xml;
 
 namespace XMLWeather
 {
@@ -17,10 +18,10 @@ namespace XMLWeather
         Color hotColor = Color.FromArgb(250, 105, 30);
         const int COLD_TEMP = -20;
         const int HOT_TEMP = 40;
-        //The closer the current min and max temperature gets to COLD_TEMP & HOT_TEMP,
-        //The closer the background color will match the 'coldest' or 'hottest' color value!
+        //The closer the current min and max temperature gets to COLD_TEMP & HOT_TEMP:
+        //The more the background color will match the 'coldest' or 'hottest' color value!
         Color minColor, maxColor;
-        double hueShiftValue = 6;
+        double hueShiftValue = 6; //How much the opacity of the background colors should change.
 
         Font defaultTempFont;
         double time = 1;
@@ -34,9 +35,6 @@ namespace XMLWeather
             InitializeComponent();
 
             DisplayCurrent();
-
-            minColor = determineColor(minTemp);
-            maxColor = determineColor(maxTemp);
 
             defaultTempFont = currentTempOutput.Font;
 
@@ -81,6 +79,9 @@ namespace XMLWeather
             cloudsOutput.Text = today.clouds;
             windSpeedOutput.Text = today.windSpeed;
             windDirectionOutput.Text = today.windDirection;
+
+            minColor = determineColor(minTemp);
+            maxColor = determineColor(maxTemp);
         }
 
         private void CurrentScreen_Paint(object sender, PaintEventArgs e)
@@ -112,6 +113,19 @@ namespace XMLWeather
 
             time += 0.015;
             Refresh();
+        }
+
+        private void updateCityButton_Click(object sender, EventArgs e)
+        {
+            string url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + cityInputTextbox.Text + ",CA&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0";
+            try
+            {
+                XmlReader reader = XmlReader.Create(url);
+                reader.Close();
+                Form1.ExtractInfo(cityInputTextbox.Text);
+                DisplayCurrent();
+            }
+            catch { cityInputTextbox.Text = "City not found"; }
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)

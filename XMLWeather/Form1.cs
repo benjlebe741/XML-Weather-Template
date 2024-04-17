@@ -26,12 +26,13 @@ namespace XMLWeather
             CurrentScreen cs = new CurrentScreen();
             this.Controls.Add(cs);
         }
-        public void ExtractInfo(string cityName) 
+        public static void ExtractInfo(string cityName) 
         {
+            days.Clear();
             ExtractForecast(cityName);
             ExtractCurrent(cityName);
         }
-        private void ExtractForecast(string cityName)
+        public static void ExtractForecast(string cityName)
         {
             string url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + cityName + ",CA&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0";
             XmlReader reader = XmlReader.Create(url);
@@ -79,7 +80,7 @@ namespace XMLWeather
             }
         }
 
-        private void ExtractCurrent(string cityName)
+        public static void ExtractCurrent(string cityName)
         {
             string url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + ",CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0";
             // current info is not included in forecast file so we need to use this file to get it
