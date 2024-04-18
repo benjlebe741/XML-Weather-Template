@@ -73,7 +73,7 @@ namespace XMLWeather
 
             cityOutput.Text = today.location;
             currentTempOutput.Text = $"{today.currentTemp}°";
-            highLowOutput.Text = $"H: {minTemp}°, L: {maxTemp}°";
+            highLowOutput.Text = $"H: {maxTemp}°, L: {minTemp}°";
             statusOutput.Text = today.condition;
             feelsLikeOutput.Text = $"feels like {today.feelsLike}°";
             humidityOutput.Text = $"humidity at {today.humidity}%";
