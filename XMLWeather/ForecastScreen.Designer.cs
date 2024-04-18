@@ -73,7 +73,7 @@
             this.day1Output.TabIndex = 64;
             this.day1Output.Text = "Monday";
             this.day1Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day1Output.Click += new System.EventHandler(this.feelsLikeOutput_Click);
+            //this.day1Output.Click += new System.EventHandler(this.feelsLikeOutput_Click);
             // 
             // HL1output
             // 
@@ -87,7 +87,7 @@
             this.HL1output.TabIndex = 61;
             this.HL1output.Text = "H: 10, L: 20";
             this.HL1output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL1output.Click += new System.EventHandler(this.label1_Click);
+            //this.HL1output.Click += new System.EventHandler(this.label1_Click);
             // 
             // cityOutput
             // 
@@ -142,7 +142,7 @@
             this.status1Output.TabIndex = 59;
             this.status1Output.Text = "Partly cloudy";
             this.status1Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status1Output.Click += new System.EventHandler(this.statusOutput_Click);
+            //this.status1Output.Click += new System.EventHandler(this.statusOutput_Click);
             // 
             // day2Output
             // 
@@ -156,7 +156,7 @@
             this.day2Output.TabIndex = 71;
             this.day2Output.Text = "Monday";
             this.day2Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day2Output.Click += new System.EventHandler(this.day2Output_Click);
+            //this.day2Output.Click += new System.EventHandler(this.day2Output_Click);
             // 
             // HL2output
             // 
@@ -170,7 +170,7 @@
             this.HL2output.TabIndex = 70;
             this.HL2output.Text = "H: 10, L: 20";
             this.HL2output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL2output.Click += new System.EventHandler(this.label3_Click_1);
+            //this.HL2output.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // status2Output
             // 
@@ -184,7 +184,7 @@
             this.status2Output.TabIndex = 69;
             this.status2Output.Text = "Partly cloudy";
             this.status2Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status2Output.Click += new System.EventHandler(this.label4_Click);
+            //this.status2Output.Click += new System.EventHandler(this.label4_Click);
             // 
             // day4Output
             // 
@@ -198,7 +198,7 @@
             this.day4Output.TabIndex = 77;
             this.day4Output.Text = "Monday";
             this.day4Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day4Output.Click += new System.EventHandler(this.day4Output_Click);
+            //this.day4Output.Click += new System.EventHandler(this.day4Output_Click);
             // 
             // HL4output
             // 
@@ -212,7 +212,7 @@
             this.HL4output.TabIndex = 76;
             this.HL4output.Text = "H: 10, L: 20";
             this.HL4output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL4output.Click += new System.EventHandler(this.label6_Click);
+            //this.HL4output.Click += new System.EventHandler(this.label6_Click);
             // 
             // status4Output
             // 
@@ -226,7 +226,7 @@
             this.status4Output.TabIndex = 75;
             this.status4Output.Text = "Partly cloudy";
             this.status4Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status4Output.Click += new System.EventHandler(this.label7_Click);
+            //this.status4Output.Click += new System.EventHandler(this.label7_Click);
             // 
             // day3Output
             // 
@@ -240,7 +240,7 @@
             this.day3Output.TabIndex = 74;
             this.day3Output.Text = "Monday";
             this.day3Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day3Output.Click += new System.EventHandler(this.day3Output_Click);
+            //this.day3Output.Click += new System.EventHandler(this.day3Output_Click);
             // 
             // HL3output
             // 
@@ -254,7 +254,7 @@
             this.HL3output.TabIndex = 73;
             this.HL3output.Text = "H: 10, L: 20";
             this.HL3output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL3output.Click += new System.EventHandler(this.label9_Click);
+            //this.HL3output.Click += new System.EventHandler(this.label9_Click);
             // 
             // status3Output
             // 
@@ -268,7 +268,7 @@
             this.status3Output.TabIndex = 72;
             this.status3Output.Text = "Partly cloudy";
             this.status3Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status3Output.Click += new System.EventHandler(this.label10_Click);
+            //this.status3Output.Click += new System.EventHandler(this.label10_Click);
             // 
             // day6Output
             // 
@@ -282,7 +282,7 @@
             this.day6Output.TabIndex = 83;
             this.day6Output.Text = "Monday";
             this.day6Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day6Output.Click += new System.EventHandler(this.day6Output_Click);
+            //this.day6Output.Click += new System.EventHandler(this.day6Output_Click);
             // 
             // HL6output
             // 
@@ -296,7 +296,7 @@
             this.HL6output.TabIndex = 82;
             this.HL6output.Text = "H: 10, L: 20";
             this.HL6output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL6output.Click += new System.EventHandler(this.label12_Click);
+            //this.HL6output.Click += new System.EventHandler(this.label12_Click);
             // 
             // status6Output
             // 
@@ -310,7 +310,7 @@
             this.status6Output.TabIndex = 81;
             this.status6Output.Text = "Partly cloudy";
             this.status6Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status6Output.Click += new System.EventHandler(this.label13_Click);
+            //this.status6Output.Click += new System.EventHandler(this.label13_Click);
             // 
             // day5Output
             // 
@@ -324,7 +324,7 @@
             this.day5Output.TabIndex = 80;
             this.day5Output.Text = "Monday";
             this.day5Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day5Output.Click += new System.EventHandler(this.day5Output_Click);
+            //this.day5Output.Click += new System.EventHandler(this.day5Output_Click);
             // 
             // HL5output
             // 
@@ -338,7 +338,7 @@
             this.HL5output.TabIndex = 79;
             this.HL5output.Text = "H: 10, L: 20";
             this.HL5output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL5output.Click += new System.EventHandler(this.label15_Click);
+            //this.HL5output.Click += new System.EventHandler(this.label15_Click);
             // 
             // status5Output
             // 
@@ -352,7 +352,7 @@
             this.status5Output.TabIndex = 78;
             this.status5Output.Text = "Partly cloudy";
             this.status5Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status5Output.Click += new System.EventHandler(this.label16_Click);
+            //this.status5Output.Click += new System.EventHandler(this.label16_Click);
             // 
             // day7Output
             // 
@@ -366,7 +366,7 @@
             this.day7Output.TabIndex = 86;
             this.day7Output.Text = "Monday";
             this.day7Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.day7Output.Click += new System.EventHandler(this.day7Output_Click);
+            //this.day7Output.Click += new System.EventHandler(this.day7Output_Click);
             // 
             // HL7output
             // 
@@ -380,7 +380,7 @@
             this.HL7output.TabIndex = 85;
             this.HL7output.Text = "H: 10, L: 20";
             this.HL7output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HL7output.Click += new System.EventHandler(this.label18_Click);
+            //this.HL7output.Click += new System.EventHandler(this.label18_Click);
             // 
             // status7Output
             // 
@@ -394,7 +394,7 @@
             this.status7Output.TabIndex = 84;
             this.status7Output.Text = "Partly cloudy";
             this.status7Output.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.status7Output.Click += new System.EventHandler(this.label19_Click);
+            //this.status7Output.Click += new System.EventHandler(this.label19_Click);
             // 
             // image1Label
             // 

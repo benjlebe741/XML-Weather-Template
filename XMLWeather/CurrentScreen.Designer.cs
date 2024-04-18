@@ -245,7 +245,6 @@
             this.imageLabel.Name = "imageLabel";
             this.imageLabel.Size = new System.Drawing.Size(98, 85);
             this.imageLabel.TabIndex = 58;
-            this.imageLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // CurrentScreen
             // 

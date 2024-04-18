@@ -110,10 +110,6 @@ namespace XMLWeather
             currentTempOutput.Font = new Font(defaultTempFont.Name, (float)(defaultTempFont.Size + (7 * Math.Sin(3 * time))));
         }
 
-        private void drawTimer_Tick(object sender, EventArgs e)
-        {
-        }
-
         private void drawTimer_Tick_1(object sender, EventArgs e)
         {
 
@@ -132,11 +128,6 @@ namespace XMLWeather
                 DisplayCurrent();
             }
             catch { cityInputTextbox.Text = "City not found"; }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
