@@ -267,7 +267,7 @@
             this.Controls.Add(this.currentTempOutput);
             this.Controls.Add(this.todayLabel);
             this.Controls.Add(this.forecastLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CurrentScreen";
             this.Size = new System.Drawing.Size(541, 898);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CurrentScreen_Paint);
