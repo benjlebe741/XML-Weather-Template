@@ -15,6 +15,7 @@ namespace XMLWeather
 {
     public partial class ForecastScreen : UserControl
     {
+        //hueshift & infoLabels are used to do the background opacity changes of labels, imagelabels stores the places I need to display images
         double hueShift = 6;
         Label[] infoLabels;
         Label[] imageLabels;
@@ -23,13 +24,16 @@ namespace XMLWeather
             InitializeComponent();
             DisplayForecast();
 
+            //Fill in my labels
             Label[] onScreenLabels = new Label[]
             {
                forecastLabel, todayLabel, day1Output, day2Output, day3Output, day4Output, day5Output, day6Output, day7Output
             };
+            //Set the background color on my labels
             double opacity = onScreenLabels.Count() * hueShift;
             foreach (Label label in onScreenLabels)
             {
+                //The later the label is in the list, the lower the opacity of its background, purely decorative
                 label.BackColor = Color.FromArgb((int)opacity, 0, 20, 130);
                 opacity -= hueShift;
             }
@@ -38,7 +42,7 @@ namespace XMLWeather
 
         public void DisplayForecast()
         {
-
+            //InfoLabels and info are arrays that coordinate with eachother in a for loop to fill all my info in: dates, high & low temps, weather conditions. 
             infoLabels = new Label[]
             {
             cityOutput,
@@ -57,9 +61,11 @@ namespace XMLWeather
 
             for (int i = 0; i < info.Count(); i++)
             {
+                //Fill all my info in, putting info[i] in infoLabels[i].text
                 infoLabels[i].Text = info[i];
             }
 
+            //get all the labels that can hold images, in order of day number
             imageLabels = new Label[]
             {
             image1Label, image2Label, image3Label, image4Label, image5Label, image6Label, image7Label
@@ -68,6 +74,7 @@ namespace XMLWeather
             ResourceManager rm = Resources.ResourceManager;
             for (int i = 0; i < imageLabels.Count(); i++)
             {
+                //Get the image code in the days list, and use it to find the appropriate image, and display it in the correct image label
                 string pngName = "_" + Form1.days[i].symbol;
                 imageLabels[i].Image = (Image)rm.GetObject(pngName);
             }
@@ -77,6 +84,7 @@ namespace XMLWeather
 
         private void todayLabel_Click(object sender, EventArgs e)
         {
+            //close this screen and open current screen.
             Form f = this.FindForm();
             f.Controls.Remove(this);
 

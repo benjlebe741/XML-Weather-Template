@@ -41,8 +41,9 @@ namespace XMLWeather
             {
                 //create a day object
                 Day ghostDay = new Day();
-                //currentTime, location;
-                //fill day object with required data
+                
+                //fill day object with required data, going top to bottom:
+
                 reader.ReadToFollowing("time");
                 ghostDay.date = reader.GetAttribute("day");
 
@@ -64,6 +65,7 @@ namespace XMLWeather
                 ghostDay.windSpeed = reader.GetAttribute("name");
 
                 reader.ReadToFollowing("temperature");
+                //This removes the decimal places on all the decimal values I receive, converting a string into a double, then into an int, then back into a string.
                 ghostDay.tempLow = $"{(int)Convert.ToDouble(reader.GetAttribute("min"))}";
                 ghostDay.tempHigh = $"{(int)Convert.ToDouble(reader.GetAttribute("max"))}";
 
@@ -73,7 +75,7 @@ namespace XMLWeather
                 reader.ReadToFollowing("clouds");
                 ghostDay.clouds = reader.GetAttribute("value");
 
-                //if day object not null add to the days list
+                //if day object has info, add to the days list
                 if (ghostDay.date != null)
                 {
                     days.Add(ghostDay);
@@ -87,14 +89,16 @@ namespace XMLWeather
             // current info is not included in forecast file so we need to use this file to get it
             XmlReader reader = XmlReader.Create(url);
 
-            //find the city and current temperature and add to appropriate item in days list
+            //find the city, current temperature, and 'feels-like' and add them to the appropriate item in days list
             reader.ReadToFollowing("city");
             days[0].location = reader.GetAttribute("name");
            
             reader.ReadToFollowing("temperature");
+            //remove decimal places
             days[0].currentTemp = $"{(int)Convert.ToDouble(reader.GetAttribute("value"))}";
 
             reader.ReadToFollowing("feels_like");
+            //remove decimal places
             days[0].feelsLike = $"{(int)Convert.ToDouble(reader.GetAttribute("value"))}";
         }
 
