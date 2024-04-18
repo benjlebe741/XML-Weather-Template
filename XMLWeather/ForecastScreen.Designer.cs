@@ -389,7 +389,7 @@
             // 
             this.image2Label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.image2Label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.image2Label.Image = global::XMLWeather.Properties.Resources._04n;
+            this.image2Label.Image = global::XMLWeather.Properties.Resources._10n;
             this.image2Label.Location = new System.Drawing.Point(416, 214);
             this.image2Label.Name = "image2Label";
             this.image2Label.Size = new System.Drawing.Size(105, 78);
@@ -449,7 +449,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCoral;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.Controls.Add(this.image2Label);
             this.Controls.Add(this.image7Label);
             this.Controls.Add(this.image6Label);
@@ -481,6 +481,7 @@
             this.Controls.Add(this.status1Output);
             this.Controls.Add(this.forecastLabel);
             this.Controls.Add(this.todayLabel);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ForecastScreen";
             this.Size = new System.Drawing.Size(541, 898);
