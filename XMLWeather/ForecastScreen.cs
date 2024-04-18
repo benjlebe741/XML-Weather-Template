@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using System.Resources;
+using XMLWeather.Properties;
 
 namespace XMLWeather
 {
@@ -14,6 +17,7 @@ namespace XMLWeather
     {
         double hueShift = 6;
         Label[] infoLabels;
+        Label[] imageLabels;
         public ForecastScreen()
         {
             InitializeComponent();
@@ -55,6 +59,20 @@ namespace XMLWeather
             {
                 infoLabels[i].Text = info[i];
             }
+
+            imageLabels = new Label[]
+            {
+            image1Label, image2Label, image3Label, image4Label, image5Label, image6Label, image7Label
+            };
+
+            ResourceManager rm = Resources.ResourceManager;
+            for (int i = 0; i < imageLabels.Count(); i++)
+            {
+                string pngName = "_" + Form1.days[i].symbol;
+                imageLabels[i].Image = (Image)rm.GetObject(pngName);
+            }
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)

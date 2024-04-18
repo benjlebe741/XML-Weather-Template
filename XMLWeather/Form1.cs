@@ -52,6 +52,7 @@ namespace XMLWeather
 
                 reader.ReadToFollowing("symbol");
                 ghostDay.condition = reader.GetAttribute("name");
+                ghostDay.symbol = reader.GetAttribute("var");
 
                 reader.ReadToFollowing("precipitation");
                 ghostDay.precipitation = reader.GetAttribute("probability");

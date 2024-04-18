@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Xml;
+using System.Resources;
+using XMLWeather.Properties;
 
 namespace XMLWeather
 {
@@ -82,6 +84,10 @@ namespace XMLWeather
 
             minColor = determineColor(minTemp);
             maxColor = determineColor(maxTemp);
+
+            ResourceManager rm = Resources.ResourceManager;
+            string pngName = "_" + today.symbol;
+            imageLabel.Image = (Image)rm.GetObject(pngName);
         }
 
         private void CurrentScreen_Paint(object sender, PaintEventArgs e)
@@ -126,6 +132,11 @@ namespace XMLWeather
                 DisplayCurrent();
             }
             catch { cityInputTextbox.Text = "City not found"; }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)

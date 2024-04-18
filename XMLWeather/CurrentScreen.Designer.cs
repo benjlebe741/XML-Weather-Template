@@ -44,6 +44,7 @@
             this.cloudsOutput = new System.Windows.Forms.Label();
             this.cityInputTextbox = new System.Windows.Forms.TextBox();
             this.updateCityButton = new System.Windows.Forms.Button();
+            this.imageLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // drawTimer
@@ -235,11 +236,23 @@
             this.updateCityButton.UseVisualStyleBackColor = false;
             this.updateCityButton.Click += new System.EventHandler(this.updateCityButton_Click);
             // 
+            // imageLabel
+            // 
+            this.imageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imageLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.imageLabel.Image = global::XMLWeather.Properties.Resources._04n;
+            this.imageLabel.Location = new System.Drawing.Point(339, 143);
+            this.imageLabel.Name = "imageLabel";
+            this.imageLabel.Size = new System.Drawing.Size(98, 85);
+            this.imageLabel.TabIndex = 58;
+            this.imageLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
+            this.Controls.Add(this.imageLabel);
             this.Controls.Add(this.updateCityButton);
             this.Controls.Add(this.cityInputTextbox);
             this.Controls.Add(this.cloudsOutput);
@@ -279,5 +292,6 @@
         private System.Windows.Forms.Label cloudsOutput;
         private System.Windows.Forms.TextBox cityInputTextbox;
         private System.Windows.Forms.Button updateCityButton;
+        private System.Windows.Forms.Label imageLabel;
     }
 }
