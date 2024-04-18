@@ -43,7 +43,7 @@ namespace XMLWeather
             {
             cityOutput,
             day1Output,day2Output, day3Output, day4Output, day5Output,day6Output, day7Output,
-            HL1output,HL2output,HL3output,HL4output,HL5output,HL6output,HL7output,
+            HL1Output,HL2Output,HL3Output,HL4Output,HL5Output,HL6Output,HL7Output,
             status1Output,status2Output,status3Output,status4Output,status5Output,status6Output,status7Output
             };
 
