@@ -127,6 +127,9 @@ namespace XMLWeather
 
         private void drawTimer_Tick_1(object sender, EventArgs e)
         {
+            //Display current time
+            timeOutput.Text = DateTime.Now.ToString("dddd\nhh:mm:ss tt");
+
             //Add to time (how my sin wave decorations work), and refresh to call the paint event
             time += 0.015;
             Refresh();

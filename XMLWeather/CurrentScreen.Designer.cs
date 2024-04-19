@@ -45,6 +45,7 @@
             this.cityInputTextbox = new System.Windows.Forms.TextBox();
             this.updateCityButton = new System.Windows.Forms.Button();
             this.imageLabel = new System.Windows.Forms.Label();
+            this.timeOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // drawTimer
@@ -246,11 +247,25 @@
             this.imageLabel.Size = new System.Drawing.Size(98, 85);
             this.imageLabel.TabIndex = 58;
             // 
+            // timeOutput
+            // 
+            this.timeOutput.BackColor = System.Drawing.Color.Transparent;
+            this.timeOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOutput.ForeColor = System.Drawing.Color.White;
+            this.timeOutput.Location = new System.Drawing.Point(305, 446);
+            this.timeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeOutput.Name = "timeOutput";
+            this.timeOutput.Size = new System.Drawing.Size(197, 78);
+            this.timeOutput.TabIndex = 59;
+            this.timeOutput.Text = "Feels like";
+            this.timeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
+            this.Controls.Add(this.timeOutput);
             this.Controls.Add(this.imageLabel);
             this.Controls.Add(this.updateCityButton);
             this.Controls.Add(this.cityInputTextbox);
@@ -292,5 +307,6 @@
         private System.Windows.Forms.TextBox cityInputTextbox;
         private System.Windows.Forms.Button updateCityButton;
         private System.Windows.Forms.Label imageLabel;
+        private System.Windows.Forms.Label timeOutput;
     }
 }
