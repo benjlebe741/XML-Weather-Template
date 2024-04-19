@@ -92,7 +92,7 @@ namespace XMLWeather
             //find the city, current temperature, and 'feels-like' and add them to the appropriate item in days list
             reader.ReadToFollowing("city");
             days[0].location = reader.GetAttribute("name");
-           
+
             reader.ReadToFollowing("temperature");
             //remove decimal places
             days[0].currentTemp = $"{(int)Convert.ToDouble(reader.GetAttribute("value"))}";

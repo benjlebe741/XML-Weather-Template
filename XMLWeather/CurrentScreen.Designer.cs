@@ -252,13 +252,12 @@
             this.timeOutput.BackColor = System.Drawing.Color.Transparent;
             this.timeOutput.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeOutput.ForeColor = System.Drawing.Color.White;
-            this.timeOutput.Location = new System.Drawing.Point(305, 446);
+            this.timeOutput.Location = new System.Drawing.Point(305, 450);
             this.timeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timeOutput.Name = "timeOutput";
             this.timeOutput.Size = new System.Drawing.Size(197, 78);
             this.timeOutput.TabIndex = 59;
             this.timeOutput.Text = "Feels like";
-            this.timeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CurrentScreen
             // 
